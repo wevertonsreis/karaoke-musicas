@@ -6,13 +6,11 @@ public class Musica extends Modelo {
     private String titulo;
     private String inicioLetra;
     private String idioma;
-
-    public Musica(Long id, String interprete, String titulo, String inicioLetra) {
-        setId(id);
-        this.interprete = interprete;
-        this.titulo = titulo;
-        this.inicioLetra = inicioLetra;
-    }
+    private String interpreteNormalizado;
+    private String tituloNormalizado;
+    private String inicioLetraNormalizado;
+    private String idiomaNormalizado;
+    private Boolean favorita;
 
     public Musica() {}
 
@@ -46,5 +44,45 @@ public class Musica extends Modelo {
 
     public void setIdioma(String idioma) {
         this.idioma = idioma;
+    }
+
+    public String getInterpreteNormalizado() {
+        return interpreteNormalizado;
+    }
+
+    public void setInterpreteNormalizado(String interpreteNormalizado) {
+        this.interpreteNormalizado = interpreteNormalizado;
+    }
+
+    public String getTituloNormalizado() {
+        return tituloNormalizado;
+    }
+
+    public void setTituloNormalizado(String tituloNormalizado) {
+        this.tituloNormalizado = tituloNormalizado;
+    }
+
+    public String getInicioLetraNormalizado() {
+        return inicioLetraNormalizado;
+    }
+
+    public void setInicioLetraNormalizado(String inicioLetraNormalizado) {
+        this.inicioLetraNormalizado = inicioLetraNormalizado;
+    }
+
+    public String getIdiomaNormalizado() {
+        return idiomaNormalizado;
+    }
+
+    public void setIdiomaNormalizado(String idiomaNormalizado) {
+        this.idiomaNormalizado = idiomaNormalizado;
+    }
+
+    public Boolean getFavorita() {
+        return favorita;
+    }
+
+    public void setFavorita(Boolean favorita) {
+        this.favorita = favorita;
     }
 }

@@ -1,18 +1,17 @@
 package br.com.karaokemusicas.activity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.os.Handler;
-import android.view.View;
+import java.util.List;
 
 import br.com.karaokemusicas.R;
+import br.com.karaokemusicas.dao.MusicaDAO;
+import br.com.karaokemusicas.modelo.Musica;
 
 /**
  * Controla as acoes do layout activity_splash_screen
@@ -33,18 +32,37 @@ public class SplashScreenActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                mostrarTelaListaDeMusicas();
+                new CarregarMusicasTask().execute();
             }
         }, TEMPO_APRESENTACAO);
+
     }
 
-    /**
-     * Redireciona o usuario para a tela de lista de musicas e finaliza a tela de apresentacao
-     */
-    private void mostrarTelaListaDeMusicas() {
-        Intent intentTelaListaDeMusicas = new Intent(SplashScreenActivity.this, ListaMusicasActivity.class);
-        startActivity(intentTelaListaDeMusicas);
-        finish();
+    private class CarregarMusicasTask extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            MusicaDAO musicaDAO = new MusicaDAO(SplashScreenActivity.this);
+            List<Musica> musicas = musicaDAO.buscarTodas();
+            if (musicas.isEmpty())
+                musicaDAO.inserirValoresIniciais();
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            Intent intentTelaListaDeMusicas = new Intent(SplashScreenActivity.this, ListaMusicasActivity.class);
+            startActivity(intentTelaListaDeMusicas);
+            finish();
+        }
+
     }
 
 }

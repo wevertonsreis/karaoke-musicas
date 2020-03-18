@@ -1,29 +1,30 @@
 package br.com.karaokemusicas.activity.listener;
 
+import android.content.Context;
 import android.widget.SearchView;
-
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.karaokemusicas.adapter.MusicaAdapter;
+import br.com.karaokemusicas.dao.MusicaDAO;
 import br.com.karaokemusicas.modelo.Musica;
 
 public class BuscarMusicasListener implements SearchView.OnQueryTextListener {
 
     private List<Musica> musicas;
-
     private MusicaAdapter musicaAdapter;
+    private Context context;
 
-    public BuscarMusicasListener(List<Musica> musicas, MusicaAdapter musicaAdapter) {
+    public BuscarMusicasListener(List<Musica> musicas, MusicaAdapter musicaAdapter, Context context) {
         this.musicas = musicas;
         this.musicaAdapter = musicaAdapter;
+        this.context = context;
     }
 
     @Override
     public boolean onQueryTextSubmit(String query) {
-        return false;
+        return true;
     }
 
     @Override
@@ -38,24 +39,13 @@ public class BuscarMusicasListener implements SearchView.OnQueryTextListener {
     }
 
     private List<Musica> filtrar(List<Musica> musicas, String texto) {
-        List<Musica> musicasFiltradas = new ArrayList<>();
         try{
-            texto = StringUtils.stripAccents(texto).toLowerCase();
-
-            for (Musica musica : musicas) {
-                String interprete = StringUtils.stripAccents(musica.getInterprete()).toLowerCase();
-                String titulo = StringUtils.stripAccents(musica.getTitulo()).toLowerCase();
-                String inicioLetra = StringUtils.stripAccents(musica.getInicioLetra()).toLowerCase();
-
-                if (interprete.contains(texto) || titulo.contains(texto) || inicioLetra.contains(texto)) {
-                    musicasFiltradas.add(musica);
-                }
-            }
-
+            MusicaDAO musicaDAO = new MusicaDAO(context);
+            return musicaDAO.buscarPorTexto(texto);
         }catch (Exception e) {
             e.printStackTrace();
         }
-        return musicasFiltradas;
+        return new ArrayList<>(0);
     }
 
 }

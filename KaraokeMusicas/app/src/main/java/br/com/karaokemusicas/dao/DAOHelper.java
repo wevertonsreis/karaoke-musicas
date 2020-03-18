@@ -6,6 +6,8 @@ import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,7 +15,7 @@ import java.io.InputStreamReader;
 public class DAOHelper extends SQLiteOpenHelper {
 
     private static final String NOME_DB = "KaraokeMusicas";
-    private static final int VERSAO_DB = 1;
+    private static final int VERSAO_DB = 2;
     private Context context;
 
     public DAOHelper(Context context) {
@@ -30,12 +32,28 @@ public class DAOHelper extends SQLiteOpenHelper {
         builderQuery.append("   interprete VARCHAR(100) NOT NULL, ");
         builderQuery.append("   titulo VARCHAR(100) NOT NULL, ");
         builderQuery.append("   inicioLetra VARCHAR(300) NOT NULL, ");
-        builderQuery.append("   idioma VARCHAR(100) NOT NULL ");
+        builderQuery.append("   idioma VARCHAR(100) NOT NULL, ");
+        builderQuery.append("   interpreteNormalizado VARCHAR(100) NOT NULL, ");
+        builderQuery.append("   tituloNormalizado VARCHAR(100) NOT NULL, ");
+        builderQuery.append("   inicioLetraNormalizado VARCHAR(300) NOT NULL, ");
+        builderQuery.append("   idiomaNormalizado VARCHAR(100) NOT NULL ");
         builderQuery.append("); ");
 
         db.execSQL(builderQuery.toString());
+        builderQuery.delete(0, builderQuery.length());
 
-        inserirValoresIniciais(db);
+        builderQuery.append("CREATE TABLE Musicas_Favoritas ( ");
+        builderQuery.append("   id INTEGER PRIMARY KEY AUTOINCREMENT, ");
+        builderQuery.append("   Musica_id INTEGER REFERENCES Musicas (id) ");
+        builderQuery.append("); ");
+
+        try {
+            db.execSQL(builderQuery.toString());
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("fim da criação");
     }
 
     @Override
@@ -43,6 +61,11 @@ public class DAOHelper extends SQLiteOpenHelper {
         StringBuilder builderQuery = new StringBuilder();
         builderQuery.append("DROP TABLE IF EXISTS Musicas;");
         db.execSQL(builderQuery.toString());
+
+        builderQuery.delete(0, builderQuery.length());
+        builderQuery.append("DROP TABLE IF EXISTS Musicas_Favoritas;");
+        db.execSQL(builderQuery.toString());
+
         onCreate(db);
     }
 
@@ -50,10 +73,10 @@ public class DAOHelper extends SQLiteOpenHelper {
      *
      * @param db
      */
-    private void inserirValoresIniciais(SQLiteDatabase db) {
+    public void inserirValoresIniciais(SQLiteDatabase db) {
         try {
             AssetManager assetManager= context.getAssets();
-            InputStreamReader is = new InputStreamReader(assetManager.open("musicas-nacionais.csv"), "UTF-8");
+            InputStreamReader is = new InputStreamReader(assetManager.open("musicas.csv"), "UTF-8");
             BufferedReader reader = new BufferedReader(is);
             String linha;
 
@@ -66,6 +89,10 @@ public class DAOHelper extends SQLiteOpenHelper {
                 valores.put("titulo", dadosDaLinha[2]);
                 valores.put("inicioLetra", dadosDaLinha[3]);
                 valores.put("idioma", dadosDaLinha[4]);
+                valores.put("interpreteNormalizado", StringUtils.stripAccents(dadosDaLinha[1]).toLowerCase());
+                valores.put("tituloNormalizado", StringUtils.stripAccents(dadosDaLinha[2]).toLowerCase());
+                valores.put("inicioLetraNormalizado", StringUtils.stripAccents(dadosDaLinha[3]).toLowerCase());
+                valores.put("idiomaNormalizado", StringUtils.stripAccents(dadosDaLinha[4]).toLowerCase());
 
                 db.insert("Musicas", null, valores);
             }

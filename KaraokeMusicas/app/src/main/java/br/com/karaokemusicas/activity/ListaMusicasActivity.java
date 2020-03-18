@@ -44,7 +44,7 @@ public class ListaMusicasActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_buscador, menu);
         MenuItem menuItem = menu.findItem(R.id.buscador);
         SearchView searchView = (SearchView) menuItem.getActionView();
-        searchView.setOnQueryTextListener(new BuscarMusicasListener(musicas, musicaAdapter));
+        searchView.setOnQueryTextListener(new BuscarMusicasListener(musicas, musicaAdapter, this));
 
         menuItem.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
             @Override

@@ -1,7 +1,7 @@
 package br.com.karaokemusicas.holder;
 
-import android.view.TextureView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +15,7 @@ public class MusicaViewHolder extends RecyclerView.ViewHolder {
     private TextView interprete;
     private TextView titulo;
     private TextView inicioLetra;
+    private ImageView botaoFavorito;
 
     public MusicaViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -22,6 +23,7 @@ public class MusicaViewHolder extends RecyclerView.ViewHolder {
         interprete = (TextView) itemView.findViewById(R.id.interprete);
         titulo = (TextView) itemView.findViewById(R.id.titulo);
         inicioLetra = (TextView) itemView.findViewById(R.id.inicio_letra);
+        botaoFavorito = (ImageView) itemView.findViewById(R.id.botao_favorito);
     }
 
     public TextView getCodigo() {
@@ -40,4 +42,7 @@ public class MusicaViewHolder extends RecyclerView.ViewHolder {
         return inicioLetra;
     }
 
+    public ImageView getBotaoFavorito() {
+        return botaoFavorito;
+    }
 }
