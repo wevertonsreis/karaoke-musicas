@@ -22,6 +22,22 @@ public class MusicaDAO {
         daoHelper.inserirValoresIniciais(writableDatabase);
     }
 
+    public Integer contarTodas() {
+        StringBuilder sql = new StringBuilder();
+        sql.append("SELECT COUNT(*) AS quantidade FROM Musicas");
+
+        Cursor cursor = daoHelper.getReadableDatabase().rawQuery(sql.toString(), null);
+
+        Integer quantidade = 0;
+        while (cursor.moveToNext()) {
+            quantidade = cursor.getInt(cursor.getColumnIndex("quantidade"));
+        }
+        cursor.close();
+
+        System.out.println("quantidade:" + quantidade);
+        return quantidade;
+    }
+
     public List<Musica> buscarTodas() {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT ");
