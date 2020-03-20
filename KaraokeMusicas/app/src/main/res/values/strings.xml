@@ -4,4 +4,6 @@
     <string name="app_de">De</string>
     <string name="app_autor">Weverton Reis</string>
     <string name="title_menu_buscador">Buscador</string>
+    <string name="tab_todas">Todas</string>
+    <string name="tab_favoritas">Favoritas</string>
 </resources>

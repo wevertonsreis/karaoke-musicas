@@ -54,7 +54,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            Intent intentTelaListaDeMusicas = new Intent(SplashScreenActivity.this, ListaMusicasActivity.class);
+            Intent intentTelaListaDeMusicas = new Intent(SplashScreenActivity.this, MainActivity.class);
             startActivity(intentTelaListaDeMusicas);
             finish();
         }

@@ -3,7 +3,8 @@ package br.com.karaokemusicas.activity.listener;
 import android.content.Context;
 import android.widget.SearchView;
 
-import java.util.ArrayList;
+import com.google.android.material.tabs.TabLayout;
+
 import java.util.List;
 
 import br.com.karaokemusicas.adapter.MusicaAdapter;
@@ -12,14 +13,16 @@ import br.com.karaokemusicas.modelo.Musica;
 
 public class BuscarMusicasListener implements SearchView.OnQueryTextListener {
 
-    private List<Musica> musicas;
-    private MusicaAdapter musicaAdapter;
     private Context context;
+    private MusicaAdapter musicaAdapter;
+    private MusicaAdapter musicaFavoritaAdapter;
+    private TabLayout tabs;
 
-    public BuscarMusicasListener(List<Musica> musicas, MusicaAdapter musicaAdapter, Context context) {
-        this.musicas = musicas;
-        this.musicaAdapter = musicaAdapter;
+    public BuscarMusicasListener(Context context, MusicaAdapter musicaAdapter, MusicaAdapter musicaFavoritaAdapter, TabLayout tabs) {
         this.context = context;
+        this.musicaAdapter = musicaAdapter;
+        this.musicaFavoritaAdapter = musicaFavoritaAdapter;
+        this.tabs = tabs;
     }
 
     @Override
@@ -29,23 +32,19 @@ public class BuscarMusicasListener implements SearchView.OnQueryTextListener {
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        try {
-            List<Musica> musicasFiltradas = filtrar(musicas, newText);
-            musicaAdapter.setFiltro(musicasFiltradas);
-        } catch (Exception e) {
-            e.printStackTrace();
+        MusicaDAO musicaDAO = new MusicaDAO(context);
+        List<Musica> musicasFiltradas;
+        switch (tabs.getSelectedTabPosition()) {
+            case 0:
+                musicasFiltradas = musicaDAO.buscarPorTexto(newText);
+                musicaAdapter.setFiltro(musicasFiltradas);
+                break;
+            case 1:
+                musicasFiltradas = musicaDAO.buscarFavoritasPorTexto(newText);
+                musicaFavoritaAdapter.setFiltro(musicasFiltradas);
+                break;
         }
         return false;
-    }
-
-    private List<Musica> filtrar(List<Musica> musicas, String texto) {
-        try{
-            MusicaDAO musicaDAO = new MusicaDAO(context);
-            return musicaDAO.buscarPorTexto(texto);
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-        return new ArrayList<>(0);
     }
 
 }
