@@ -7,11 +7,8 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.List;
-
 import br.com.karaokemusicas.R;
 import br.com.karaokemusicas.dao.MusicaDAO;
-import br.com.karaokemusicas.modelo.Musica;
 
 /**
  * Controla as acoes do layout activity_splash_screen
@@ -48,10 +45,9 @@ public class SplashScreenActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             MusicaDAO musicaDAO = new MusicaDAO(SplashScreenActivity.this);
-            List<Musica> musicas = musicaDAO.buscarTodas();
-            if (musicas.isEmpty())
+            if (musicaDAO.contarTodas() == 0) {
                 musicaDAO.inserirValoresIniciais();
-
+            }
             return null;
         }
 

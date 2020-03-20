@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,13 +33,14 @@ public class MusicaAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_musica, parent, false);
-        MusicaViewHolder musicaViewHolder = new MusicaViewHolder(view);
+        MusicaViewHolder musicaViewHolder = new MusicaViewHolder(view, context);
         return musicaViewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         MusicaViewHolder musicaViewHolder = (MusicaViewHolder) holder;
+
         final Musica musica = musicas.get(position);
         musicaViewHolder.getCodigo().setText(musica.getId().toString());
         musicaViewHolder.getInterprete().setText(musica.getInterprete());
@@ -64,9 +64,6 @@ public class MusicaAdapter extends RecyclerView.Adapter {
                     musica.setFavorita(false);
 
                     musicaFavoritaDAO.deletar(musica);
-
-                   // Toast.makeText(context, "Música removida dos favoritos", Toast.LENGTH_SHORT).show();
-
                 } else {
                     imageView.setImageIcon(Icon.createWithResource(context, android.R.drawable.btn_star_big_on));
                     musica.setFavorita(true);
@@ -74,8 +71,6 @@ public class MusicaAdapter extends RecyclerView.Adapter {
                     MusicaFavorita musicaFavorita = new MusicaFavorita();
                     musicaFavorita.setMusica(musica);
                     musicaFavoritaDAO.inserir(musicaFavorita);
-
-                    //Toast.makeText(context, "Música incluida dos favoritos", Toast.LENGTH_SHORT).show();
                 }
 
             }
