@@ -1,3 +1,4 @@
+codigo;interprete;titulo;inicio_letra;idioma
 1001;PARALAMAS DO SUCESSO;A LHE ESPERAR;Lá onde o vento vai dar onde a nuvem beija;BRA
 1002;AVIÕES DO FORRÓ - BANDA CALYPSO;AGORA CHORA;Sei que nada vai fazer você voltar mas por;BRA
 1003;ASA DE ÁGUIA - IVETE SANGALO;ALÉM MAR;Tudo que eu preciso eu já tenho aqui;BRA
@@ -38,16 +39,16 @@
 1038;OS SALTIMBANCOS;BICHARIA;Au au au ió i-ó miau miau miau co corocó;BRA
 1039;14 BIS;BOLA DE MEIA BOLA DE GUDE;Há um menino há um moleque;BRA
 1040;INFANTIL;CAI CAI BALÃO;Cai cai balão cai cai balão...;BRA
-1041;RAUL SEIXAS;CARIMBADOR MALUCO;"Cinco quatro três dois pare espere;BRA
+1041;RAUL SEIXAS;CARIMBADOR MALUCO;Cinco quatro três dois pare espere;BRA
 1042;INFANTIL;COELHINHO DE OLHOS VERMELHOS;De olhos vermelhos de pêlo...;BRA
 1043;CHIQUITITAS;CORAÇÃO COM BURAQUINHOS;Sabe o coração às vezes chora;BRA
 1044;JAIRZINHO E SIMONY;CORAÇÃO DE PAPELÃO;Recortei a luz da lua e colei...;BRA
 1045;INFANTIL - ELIANA;DEDINHOS (REMIX);Ou ou... Dedinhos... Polegares polegares;BRA
 1046;BALÃO MÁGICO (A TURMA DO);DIA DOS PAIS;Um passarinho me acordou cedinho;BRA
 1047;SANDY E JÚNIOR;DIG-DIG-JOY;Dig-dig-joy dig-joy bo boy;BRA
-1048;MULEKADA;FOI DE BRINCADEIRA;"Vamos brincar do que brincar de dançar;BRA
+1048;MULEKADA;FOI DE BRINCADEIRA;Vamos brincar do que brincar de dançar;BRA
 1049;INFANTIL;FUI MORAR NUMA CASINHA;Fui morar numa casinha nha...;BRA
-1050;OS SALTIMBANCOS;HISTÓRIA DE UMA GATA;"Me alimentaram me acariciaram;BRA
+1050;OS SALTIMBANCOS;HISTÓRIA DE UMA GATA;Me alimentaram me acariciaram;BRA
 1051;INFANTIL;MEU LANCHINHO;Meu lanchinho meu lanchinho...;BRA
 1052;INFANTIL;MEU PINTINHO AMARELINHO;Meu pintinho amarelinho...;BRA
 1053;XUXA;MILAGRE DA VIDA;Descobri uma palavra que ninguém sabe;BRA
@@ -540,7 +541,7 @@
 1541;CHICO BUARQUE - MPB4;AMIGO É PRA ESSAS COISAS;Salve... como é que vai amigo há quanto;BRA
 1542;RICARDO E EDUARDO;BEIJO, ME LIGA;Beijo me liga e a gente fica mas sem;BRA
 1543;BALÃO MÁGICO (A NOVA TURMA DO);BRUXINHA;Ô bruxinha bonitinha da vassoura de;BRA
-1544;TOQUINHO - VINICIUS DE MORAES;CANTO DE OSSANHA;O homem que diz "dou" não dá;BRA
+1544;TOQUINHO - VINICIUS DE MORAES;CANTO DE OSSANHA;O homem que diz dou não dá;BRA
 1545;MARIA GADÚ;CEDO NÃO;A menina chegou me olhou bem assim;BRA
 1546;FERNANDO E SOROCABA;DA COR DO PECADO;Corpo moreno sarado gostoso;BRA
 1547;NENHUM DE NÓS;DANÇA DO TEMPO;Olhe sempre pros dois lados antes de julga;BRA
@@ -1480,7 +1481,7 @@
 2881;ERASMO CARLOS - RENATO RUSSO;A CARTA;Escrevo-te estas mal traçadas linhas;BRA
 2882;SÉRGIO BRITTO E NEGRA LI;AQUI NESTE LUGAR;Ninguém sabe quanto cabe pedir e alguém;BRA
 2883;TURMA DO BALÃO MÁGICO;BOMBOM (MARIA ISABEL);Sonhei que era um cantor de fama internac;BRA
-2884;NAIARA AZEVEDO;COITADO (RESPOSTA "SOU FODA");Coitado se acha muito macho sou eu quem;BRA
+2884;NAIARA AZEVEDO;COITADO (RESPOSTA SOU FODA);Coitado se acha muito macho sou eu quem;BRA
 2885;DOMINÓ;COM TODOS MENOS COMIGO;Vai por aí com uns e com outros ...;BRA
 2886;BABY CONSUELO;EMILIA (A BONECA GENTE);De uma caixa de costura pano linha e agulh;BRA
 2887;WANDO;EU ACHO QUE ESTOU PERDENDO VOCÊ;Você não liga mais nem tem tempo pra mim;BRA
@@ -1710,7 +1711,7 @@
 3111;MARIA BETHÂNIA;GOSTOSO DEMAIS;Tô com saudade de tu meu desejo;BRA
 3112;LEGIÃO URBANA;HÁ TEMPOS;Parece cocaína mas é só...;BRA
 3113;HINO DO CORINTHIANS;HINO DO CORINTHIANS;Salve o Corinthians...;BRA
-3114;NEY MATOGROSSO;HOMEM COM "H";Nunca vi rastro de cobra;BRA
+3114;NEY MATOGROSSO;HOMEM COM H;Nunca vi rastro de cobra;BRA
 3115;XUXA;ILARIÊ;Tá na hora tá na hora;BRA
 3116;NEGRITUDE JÚNIOR;INDIFERENÇA;A gente já não fala mais...;BRA
 3117;GRUPO PIRRAÇA;INIGUALÁVEL PAIXÃO;És inigualável na arte de amar...;BRA
@@ -1841,7 +1842,7 @@
 3242;EDUARDO ARAÚJO;RUA AUGUSTA;Entrei na Rua Augusta a cento e vinte;BRA
 3243;MAMONAS ASSASSINAS;SABÃO CRÁ-CRÁ;Sabão crá-crá;BRA
 3244;EMÍLIO SANTIAGO;SAIGON;Tantas palavras meias palavras;BRA
-3245;DEMÔNIOS DA GAROA;SAMBA DO "ARNESTO";Paiz paiz paiz... O Arnesto nos convidô;BRA
+3245;DEMÔNIOS DA GAROA;SAMBA DO ARNESTO;Paiz paiz paiz... O Arnesto nos convidô;BRA
 3246;CAETANO VELOSO;SAMPA;Alguma coisa acontece no meu coração;BRA
 3247;CRISTINA MONTEIRO;SANTA MADRUGADA;Talvez um dia a gente possa se encontrar;BRA
 3248;HINO DO SÃO PAULO;HINO DO SÃO PAULO;Salve o Tri-color paulista...;BRA
@@ -2084,7 +2085,7 @@
 3485;BETO BARBOSA;PRETA;Preta fala pra mim;BRA
 3486;XUXA E JOSÉ AUGUSTO;QUERER É PODER;Eu posso ir onde eu quiser;BRA
 3487;KATINGUELÊ;RECADO À MINHA AMADA;Lua vai iluminar os...;BRA
-3488;ENGENHEIROS DO HAWAÍ;REFRÃO DE BOLERO;Eu que falei "Nem pensar...";BRA
+3488;ENGENHEIROS DO HAWAÍ;REFRÃO DE BOLERO;Eu que falei Nem pensar...;BRA
 3489;ORQUESTRA DA TERRA;REI DO GADO;Sou desse chão onde o rei...;BRA
 3490;WANDO;SAFADA;Eu te quero assim;BRA
 3491;RAÇA NEGRA;SEU AMOR JÁ TERMINOU;Seu amor já terminou você já nem liga;BRA
@@ -2152,7 +2153,7 @@
 3553;ROUPA NOVA;AMAR É...;Amar... é quando não dá mais pra disfar;BRA
 3554;MARISA MONTE;BALANÇA PEMA;Don don din... Balança a pema balança sem;BRA
 3555;ELBA RAMALHO;BANHO DE CHEIRO;Eu quero um banho de cheiro;BRA
-3556;SÉRGIO REIS;CAVALO PRETO;Tenho um cavalo preto por nome de "Vent;BRA
+3556;SÉRGIO REIS;CAVALO PRETO;Tenho um cavalo preto por nome de Vent;BRA
 3557;SÉRGIO REIS;CHICO MINEIRO;Fizemos a última viagem;BRA
 3558;ZEZÉ DI CAMARGO E LUCIANO;COMO UM ANJO;Como um anjo você apareceu na minha;BRA
 3559;CHRYSTIAN E RALF;DESEJO DE AMAR;Pele macia, toda morena Esse seu corpo;BRA
@@ -2171,13 +2172,13 @@
 3572;LAURA PAUSINI;LA SOLITUDINE;Marco se n'e andato e non...;ITA
 3573;CHITÃOZINHO E XORORÓ;LOIRA GELADA;Hoje eu vou cair no mundo;BRA
 3574;RICKY MARTIN;MARIA;Un dos tres um pasito pa\'delante Maria;ESP
-3575;XUXA;MARQUEI UM "X";Marquei um "X" Um "X";BRA
+3575;XUXA;MARQUEI UM X;Marquei um X Um X;BRA
 3576;COMPANHIA DO PAGODE;MELÔ DO STRIP TEASE;Eu lhe disse que não bulisse;BRA
 3577;NETINHO;MENINA LINDA;Óh menina linda tão bela;BRA
 3578;GAL COSTA;MEU BEM, MEU MAL;Você é meu caminho, meu...;BRA
 3579;ROYCE DO CAVACO;MEU CORAÇÃO É TEU;Infelizmente nós somos assim;BRA
 3580;ROBERTO CARLOS;MULHER DE 40;Sorriso bonito olhar de quem sabe;BRA
-3581;ZEZÉ DI CAMARGO E LUCIANO;NA HORA "H";Eu preciso te dizer que ainda te que;BRA
+3581;ZEZÉ DI CAMARGO E LUCIANO;NA HORA H;Eu preciso te dizer que ainda te que;BRA
 3582;ART POPULAR;NANI;Quantas vezes Nani tantas vezes Nani;BRA
 3583;DANIELA MERCURY;NOBRE VAGABUNDO;Quanto tempo tenho pra matar essa sau;BRA
 3584;MILTON NASCIMENTO;NOS BAILES DA VIDA;Foi nos bailes da vida ou num bar;BRA
@@ -2201,7 +2202,7 @@
 3602;PARALAMAS DO SUCESSO;A NOVIDADE;A novidade veio dar à praia;BRA
 3603;LEGIÃO URBANA;A VIA LÁCTEA;Quando tudo está perdido...;BRA
 3604;SÓ PRA CONTRARIAR;AMOR VERDADEIRO;Olhe dentro de mim, você pode se ver;BRA
-3605;VIRGULÓIDES;BAGULHO NO BUMBA;Nessa "bumba" eu não ando mais;BRA
+3605;VIRGULÓIDES;BAGULHO NO BUMBA;Nessa bumba eu não ando mais;BRA
 3606;MARISA MONTE;BEIJA EU;Seja eu, seja eu deixa que eu seja eu;BRA
 3607;BANDA EVA;BELEZA RARA;Eu não posso deixar que o tempo;BRA
 3608;CIDADE NEGRA;CASA;É seu único lugar no mundo;BRA
@@ -2493,7 +2494,7 @@
 3894;JESSÉ;PORTO SOLIDÃO;Se um veleiro repousasse...;BRA
 3895;NETINHO;PRA TE TER AQUI;Me sinto tão sozinho por que não vem me;BRA
 3896;CHITÃOZINHO E XORORÓ;PURA EMOÇÃO;Ela é mistério nesse jeito sério;BRA
-3897;RAUL SEIXAS;ROCK DAS "ARANHA";Subi no muro do quintal e vi uma transa qu;BRA
+3897;RAUL SEIXAS;ROCK DAS ARANHA;Subi no muro do quintal e vi uma transa qu;BRA
 3898;SENSAÇÃO;SENTIMENTO NU;É... tudo era azul sentimento nu;BRA
 3899;MILTON GUEDES;SONHO DE UMA NOITE DE VERÃO;Sonho de uma noite de verão;BRA
 3900;BANDA EVA;VEM MEU AMOR;Quando te vejo paro logo em teu olhar;BRA
@@ -3051,7 +3052,7 @@
 4453;NETINHO;PRA SEMPRE EU VOU TE AMAR;Quanto tempo longe de você;BRA
 4454;CAZUZA;QUASE UM SEGUNDO;Eu queria ver No escuro do mundo;BRA
 4455;DANIEL;QUE ERA EU;Um dia você vai procurar por mim;BRA
-4456;AS MENINAS;SAMBA DA NEGA MALUCA;"Afe" Maria Ô nega danada;BRA
+4456;AS MENINAS;SAMBA DA NEGA MALUCA;Afe Maria Ô nega danada;BRA
 4457;IVETE SANGALO;SE EU NÃO TE AMASSE TANTO ASSIM;Meu coração sem direção...;BRA
 4458;ADRYANA E A RAPAZIADA;SÓ FALTAVA VOCÊ;Só faltava você pra completar;BRA
 4459;SKANK;TRÊS LADOS;Escutei alguém abrir os portões é;BRA
@@ -3090,7 +3091,7 @@
 4492;TWISTER;QUARENTA GRAUS;Yeah yeah Nada mal a cada dia;BRA
 4493;SÓ PRA CONTRARIAR;QUEM DERA;A noite madrugou Se fez manhã;BRA
 4494;LEONARDO;QUERO COLO;Quem é que garante Que não vou chorar;BRA
-4495;VINNY;SEJA COMO FOR;Fecha a porta entra logo E "vamo" nessa;BRA
+4495;VINNY;SEJA COMO FOR;Fecha a porta entra logo E vamo nessa;BRA
 4496;MAURÍCIO MANIERI;TE QUERO TANTO;Chubiduba... Nunca imaginei te amar assim;BRA
 4497;WANDERLÉA;TERNURA;Uma vez você falou Que era meu o seu;BRA
 4498;É O TCHAN;TRIBOTCHAN;Uh uh ah ah... Tchan... Essa é a tribotchan;BRA
@@ -3432,7 +3433,7 @@
 4834;LARA FABIAN;LOVE BY GRACE;Uh uh uh... I remember the...;EUA
 4835;JOHN PAUL YOUNG;LOVE IS IN THE AIR;Love is in the air everywhere...;EUA
 4836;SUZANNE VEGA;LUKA;My name is Luka I live on the second floor;EUA
-4837;LOU BEGA;MAMBO NUMBER FIVE;"Ladies and gentlemen;EUA
+4837;LOU BEGA;MAMBO NUMBER FIVE;Ladies and gentlemen;EUA
 4838;SHANIA TWAIN;MAN I FEEL LIKE A WOMAN;Let's go girls come on I'm going out tonight..;EUA
 4839;MARMALADE (THE);REFLECTIONS OF MY LIFE;The changing of sunlight to moonlight;EUA
 4840;ROD STEWART;SAILING;I am sailing I am sailing;EUA
@@ -3915,7 +3916,7 @@
 6027;RICK E RENNER;PRA FICAR DEZ;É pra remexer Pra requebrar;BRA
 6028;CAPITAL INICIAL - KIKO ZAMBIANCHI;PRIMEIROS ERROS;Meu caminho é cada manhã;BRA
 6029;DANIEL;QUANDO O CORAÇÃO SE APAIXONA;Quando o coração Da gente se apaixona;BRA
-6030;BANDA MAGNÍFICOS;SÓ DEPENDE DE NÓS;Só depende de nós "Pega" fogo os lençóis;BRA
+6030;BANDA MAGNÍFICOS;SÓ DEPENDE DE NÓS;Só depende de nós Pega fogo os lençóis;BRA
 6031;SANDRA DE SÁ;SOLIDÃO;Solidão dá um Tempo e vá saindo;BRA
 6032;JOTA QUEST;TELE-FOME;Não alimento amor Por...;BRA
 6033;RAUL SEIXAS;TENTE OUTRA VEZ;Veja não diga que a Canção está perdida;BRA
@@ -3963,7 +3964,7 @@
 6075;TIHUANA;QUE VES;Olhando no olho posso viajar;BRA
 6076;GONZAGUINHA;SANGRANDO;Quando eu soltar a minha voz...;BRA
 6077;DANIEL;SHOW DE BOLA;Vem cá meu bem pro escurinho;BRA
-6078;OS TRAVESSOS;UM DIA PRA NÓS DOIS;"Preciso te ver saber se você vai me olhar;BRA
+6078;OS TRAVESSOS;UM DIA PRA NÓS DOIS;Preciso te ver saber se você vai me olhar;BRA
 6079;CHITÃOZINHO E XORORÓ;UM, DOIS, TRÊS;Um dois três... Um descobri que um pe mu;BRA
 6080;SÓ PRA CONTRARIAR;VEM ME LIVRAR DESSE ABANDONO;Vá embora eu não quero brincar de amor;BRA
 6081;IVETE SANGALO;A LUA Q EU T DEI;Posso te falar dos sonhos...;BRA
@@ -3971,7 +3972,7 @@
 6083;WANESSA CAMARGO;APAIXONADA POR VOCÊ;Você chegou e eu descobri a paixão;BRA
 6084;LULU SANTOS;APENAS MAIS UMA DE AMOR;Eu gosto tanto de você que até prefiro;BRA
 6085;ROBERTO CARLOS;AS CURVAS DA ESTRADA DE SANTOS;Se você pretende saber quem eu sou;BRA
-6086;OS SERRANOS;BAILE DA MARIQUINHA;"Mas olha lá quem vem chegando;BRA
+6086;OS SERRANOS;BAILE DA MARIQUINHA;Mas olha lá quem vem chegando;BRA
 6087;BANDA BEIJO;BATE LATA;Era um menino tocador que dispensou;BRA
 6088;MAURÍCIO MANIERI;BOTA PRA MEXER;Bota pra mexer pra mexer oh;BRA
 6089;RIONEGRO E SOLIMÕES;BRETE DA SOLIDÃO;Hoje vou sair pro abraço quero caprichar n;BRA
@@ -3996,14 +3997,14 @@
 6108;HARMONIA DO SAMBA;O RODO;Sou da muvuca-ca sou Bahia...;BRA
 6109;ANA CAROLINA;QUEM DE NÓS DOIS;Eu e você não é assim tão complicado não;BRA
 6110;EXALTASAMBA;QUEM É VOCÊ;Quem é você pra mudar assim o coração;BRA
-6111;BELO;QUEM SERÁ;"Alô quem tá falando como quem tá faland;BRA
+6111;BELO;QUEM SERÁ;Alô quem tá falando como quem tá faland;BRA
 6112;RAIMUNDOS;REGGAE DO MANERO;Se eu uso a manga da camisa que é do;BRA
 6113;FALAMANSA;RINDO À TOA;Tô numa boa tô aqui de novo daqui não sa;BRA
 6114;TWISTER;SE UM DIA EU TIVER VOCÊ;Ela me olha um olhar gelado...;BRA
 6115;RICK E RENNER;SEGUIR EM FRENTE;Vou seguir em frente vou tentar mais;BRA
 6116;DANIEL;SEUS BEIJOS;Quero sentir o leve toque das suas mãos;BRA
 6117;DANIELA MERCURY;SÓ NO BALANÇO DO MAR;Tchuru tchuru... Já naveguei maremoto;BRA
-6118;PAGOD'ART;TAPA NA CARA;"Você não pediu maínha eu vou te dar dan;BRA
+6118;PAGOD'ART;TAPA NA CARA;Você não pediu maínha eu vou te dar dan;BRA
 6119;BOBBY DI CARLO;TIJOLINHO;Sei que se esperar mais um pouquinho;BRA
 6120;NEY MATOGROSSO;VIAJANTE;Eu me sinto tolo como um viajante;BRA
 6121;ADRYANA E A RAPAZIADA;AMOR PRA VALER;Já faz tanto tempo não consigo esquecer;BRA
@@ -4025,7 +4026,7 @@
 6137;IRA!;LOGO DE CARA;De onde você vem quem...;BRA
 6138;ERASMO CARLOS - MARISA MONTE;MAIS UM NA MULTIDÃO;Guarde segredo que te quero e conte só os;BRA
 6139;JORGE ARAGÃO;MALANDRO;La laiá laiá... Malandro eu ando...;BRA
-6140;ZECA PAGODINHO;MANECO TELECOTECO;"Ih ó o Maneco aí coitado do tamborim;BRA
+6140;ZECA PAGODINHO;MANECO TELECOTECO;Ih ó o Maneco aí coitado do tamborim;BRA
 6141;ZÉLIA DUNCAN;ME REVELAR;Tudo aqui quer me revelar minha letra min;BRA
 6142;CAETANO VELOSO;MEIA LUA INTEIRA;Meia lua inteira sopapo na...;BRA
 6143;BRUNO E MARRONE;MEU JEITO DE SENTIR;Toda vez que vai sair o sol eu estou;BRA
@@ -4074,7 +4075,7 @@
 6186;ENGENHEIROS DO HAWAÍ;NOVOS HORIZONTES;Corpos em movimento universo em expans;BRA
 6187;GIAN E GIOVANI;NUNCA MAIS VOU ESQUECER;Por que me deu vontade de te...;BRA
 6188;ROBERTO CARLOS;O GRANDE AMOR DA MINHA VIDA;A primeira vez em que eu te vi eu nunca m;BRA
-6189;P.O. BOX;OS BICHINHOS;"E a gente queria então fazer uma música;BRA
+6189;P.O. BOX;OS BICHINHOS;E a gente queria então fazer uma música;BRA
 6190;MARISA MONTE;PANIS ET CIRCENSES;Eu quis cantar minha canção iluminada de;BRA
 6191;KLB;POR QUE TEM QUE SER ASSIM?;Uma linda estrela eu vi brilhar...;BRA
 6192;BELO;PROCURA-SE UM AMOR;Procura-se um amor que tenha cor de;BRA
@@ -4091,7 +4092,7 @@
 6203;OS TRAVESSOS;ADIVINHA;Adivinha o que eu quero com você;BRA
 6204;ARA KETU;AMANTES;Vou caminhando nas ruas pensando em;BRA
 6205;NATIRUTS;ANDEI SÓ;Preciso demonstrar pra ela...;BRA
-6206;REINALDO;ATÉ DE MANHÃ;"Firma na palma da mão" alô rapaziada;BRA
+6206;REINALDO;ATÉ DE MANHÃ;Firma na palma da mão alô rapaziada;BRA
 6207;DANIELA MERCURY;BEAT LAMENTO;Meu coração baticum por você;BRA
 6208;RASTAPÉ;BEIJO ROUBADO;Tenho a vontade de abraçar a noite inteira;BRA
 6209;ROBERTO CARLOS;CAMA E MESA;Eu quero ser sua canção eu quero ser;BRA
@@ -4124,10 +4125,10 @@
 6236;TOQUINHO - VINICIUS DE MORAES;REGRA TRÊS;Tantas você fez que ela cansou;BRA
 6237;LEONARDO;TÔ FORA;Medo de perder você de novo é descobrir;BRA
 6238;SÉRGIO REIS;TREM DO PANTANAL;Enquanto esse velho trem atravessa o;BRA
-6239;ZECA PAGODINHO;VACILÃO;"Olha só o pé quebrado que o sujeito;BRA
+6239;ZECA PAGODINHO;VACILÃO;Olha só o pé quebrado que o sujeito;BRA
 6240;FALAMANSA;XOTE DA ALEGRIA;Se um dia alguém mandou ser o que sou e;BRA
 6241;SANDY E JÚNIOR;A GENTE DÁ CERTO;Do lado de lá do lado de cá...;BRA
-6242;DANIEL;A JIRIPOCA VAI PIAR;Hoje a jiripoca vai "piá" vai;BRA
+6242;DANIEL;A JIRIPOCA VAI PIAR;Hoje a jiripoca vai piá vai;BRA
 6243;TITÃS;A MELHOR BANDA DE TODOS OS TEMPOS;Quinze minutos de fama mais um pros;BRA
 6244;MARCUS VIANA;A MIRAGEM;Ah se pudéssemos contar as voltas que;BRA
 6245;GONZAGUINHA - LUIZ GONZAGA;A VIDA DO VIAJANTE;Minha vida é andar por esse país;BRA
@@ -4216,7 +4217,7 @@
 6328;ARA KETU;COBERTOR;Como é que você foi embora sem dizer pel;BRA
 6329;ROBERTO CARLOS;E POR ISSO ESTOU AQUI;Olha dentro dos meus olhos vê quanta trist;BRA
 6330;TITÃS;EPITÁFIO;Devia ter amado mais ter chorado mais;BRA
-6331;EXALTASAMBA;EU CHORO;"Você pensa que só você chora eu também;BRA
+6331;EXALTASAMBA;EU CHORO;Você pensa que só você chora eu também;BRA
 6332;IRA!;FLORES EM VOCÊ;De todo o meu passado boas e...;BRA
 6333;SUPLA;GAROTA DE BERLIM;Caminhava eu sozinho a noite olhando par;BRA
 6334;SANDRA DE SÁ;JOGA FORA;É cansei já não dá mais você pisou demais;BRA
@@ -4254,14 +4255,14 @@
 6366;MATOGROSSO E MATHIAS;DE IGUAL PRA IGUAL;Você mentiu quando jurava para mim quan;BRA
 6367;ZECA PAGODINHO;DEIXA A VIDA ME LEVAR;Eu já passei por quase tudo nessa vida;BRA
 6368;RICK E RENNER;É DEZ, É CEM, É MIL;Você me parte de desejo e até me deixa;BRA
-6369;NETINHO;ESSA GAROTA;"É muita sensualidade melhor parar de fica;BRA
+6369;NETINHO;ESSA GAROTA;É muita sensualidade melhor parar de fica;BRA
 6370;CAMISA DE VÊNUS;EU NÃO MATEI JOANA D'ARC;Eu nunca tive nada com Joana D'arc;BRA
 6371;RINALDO - LIRIEL;EU NUNCA MAIS VOU TE ESQUECER;Se eu tivesse o coração que dei;BRA
 6372;CAPITAL INICIAL;FÁTIMA;Vocês esperam uma intervenção divina...;BRA
 6373;SÓ PRA CONTRARIAR;FINAL FELIZ;Chega de fingir eu não teho nada a escond;BRA
 6374;CIDADE NEGRA;GIRASSOL;Tchuru ruru... A favor da comunidade que;BRA
 6375;DEBORAH BLANDO;INNOCENCE;O céu esconde o que eu queria ver;BRA
-6376;LILIAN;LACINHOS COR-DE-ROSA (PINK SHOE LACE;"Tenho um amor puro e verdadeiro;BRA
+6376;LILIAN;LACINHOS COR-DE-ROSA (PINK SHOE LACE;Tenho um amor puro e verdadeiro;BRA
 6377;MARISA MONTE;LENDA DAS SEREIAS RAINHA DO MAR;Oguntê Marabô Caiala e Sobá;BRA
 6378;CHARLIE BROWN JR.;LUGAR AO SOL;Que bom viver como é bom sonhar;BRA
 6379;PLACA LUMINOSA;MAIS UMA VEZ;Telefono te procuro mil loucuras pra poder;BRA
@@ -4290,7 +4291,7 @@
 6402;A COR DO SOM;ABRI A PORTA;Abri a porta apareci a mais bonita sorriu pr;BRA
 6403;KELLY KEY;ANJO;Mais uma noite chega e com...;BRA
 6404;ZECA PAGODINHO;BAGAÇO DA LARANJA;Fui num pagode acabou a comida acabou a;BRA
-6405;LEANDRO LEHART;CAMILA BANDIDA;"Essa é a história de uma...;BRA
+6405;LEANDRO LEHART;CAMILA BANDIDA;Essa é a história de uma...;BRA
 6406;SKANK;CANÇÃO NOTURNA;Misterioso luar de fronteira derramando;BRA
 6407;LS JACK;CARLA;Eu cheguei a deixar vestígios pra você me;BRA
 6408;CLAUDINHO E BUCHECHA;COISA DE CINEMA;Hoje tudo tem que ser legal e o super-hom;BRA
@@ -5393,7 +5394,7 @@
 7505;BALÃO MÁGICO (A TURMA DO);A GALINHA MAGRICELA;Eu conheço uma galinha a galinha da;BRA
 7506;INFANTIL;A HISTÓRIA DA SERPENTE;Essa é a história da serpente...;BRA
 7507;INFANTIL;A JANELINHA;A janelinha fecha quando está...;BRA
-7508;SANDY E JÚNIOR;ABRE A PORTA MARIQUINHA A RESPOSTA;"Abre a porta Mariquinha" eu não abro não;BRA
+7508;SANDY E JÚNIOR;ABRE A PORTA MARIQUINHA A RESPOSTA;Abre a porta Mariquinha eu não abro não;BRA
 7509;DISNEY - A PEQUENA SEREIA;AQUI NO MAR;O fruto do meu vizinho parece melhor;BRA
 7510;DISNEY - CINDERELA;BIBIDI-BOBIDI-BU;Salagadula mexe cabula bibidi babi;BRA
 7511;TRIO ESPERANÇA;BOLINHA DE SABÃO;Sentado na calçada de canudo e canequinh;BRA
@@ -5432,7 +5433,7 @@
 7544;TREM DA ALEGRIA;PIUÍ ABACAXI;Piuí piuí piuí abacaxi...;BRA
 7545;CASTELO RÁ - TIM - BUM;PORQUE SIM NÃO É RESPOSTA;Dentro da lâmpada tinha um gênio quem a;BRA
 7546;INFANTIL - ATCHIM E ESPIRRO;QUEM TEM MEDO DO LOBO MAU;Quem tem medo do lobo mau lobo mau;BRA
-7547;CASTELO RÁ - TIM - BUM;RATINHO ESCOVANDO OS DENTES;Legal nós somos "ai vocês são quem";BRA
+7547;CASTELO RÁ - TIM - BUM;RATINHO ESCOVANDO OS DENTES;Legal nós somos ai vocês são quem;BRA
 7548;A TURMA DA MÔNICA;SER CRIANCA É BOM;Ser criança é bom ser criança ...;BRA
 7549;GILBERTO GIL;SÍTIO DO PICAPAU AMARELO;Tchuru tchu... Marmelada...;BRA
 7550;DISNEY - MOGLI;SOMENTE O NECESSÁRIO;Eu uso o necessário somente o necessário;BRA
@@ -5920,7 +5921,7 @@
 9077;CARLY SIMON;YOU KNOW WHAT TO DO;The night is filled with pretty girls;EUA
 9078;SIMPLY RED;YOU MAKE ME FEEL BRAND NEW;My love I'll never find the words...;EUA
 9079;ELTON JOHN;YOUR SONG;It's a little bit funny this feeling in;EUA
-9080;SHANIA TWAIN;YOU'RE STILL THE ONE;"When I first saw you I saw love;EUA
+9080;SHANIA TWAIN;YOU'RE STILL THE ONE;When I first saw you I saw love;EUA
 9081;SPICE GIRLS;2 BECOME 1;Candle light and soul forever a dream of you;EUA
 9082;JOHNNY MATHIS;A CERTAIN SMILE;A certain smile a certain face...;EUA
 9083;AMERICA;A HORSE WITH NO NAME;On the first part of the journey I was lookin' a;EUA
@@ -6969,7 +6970,7 @@
 15348;NEGO JOE;PRIMEIRO RAIO DE SOL;Uô uô uô...quando o primeiro...;BRA
 15349;FRED E GUSTAVO;QUEM NÃO BEIJA BEBE;Quem não beija bebe ...;BRA
 15350;MACIEL MELO, XANGAI E NANA;RAINHA;És rainha na vida de um moleque;BRA
-15351;MULHER MANGABA (ELLEN ROCHE);SOLTEIRINHA DA POMPÉIA "TRELA-TRELA";Eu sou a solteirinha;BRA
+15351;MULHER MANGABA (ELLEN ROCHE);SOLTEIRINHA DA POMPÉIA TRELA-TRELA;Eu sou a solteirinha;BRA
 15352;DJAVAN;SORRISO DE LUZ;No primeiro olhar deu pra imaginar;BRA
 15353;CRISTIANO ARAÚJO;TÁ MAIS PRA CAPETINHA;Copo com Red Label olhar de serpente;BRA
 15354;POLLO - FERNANDA CHAGAS;TRAMA;E você fala que gosta mas eu sei que;BRA
@@ -8424,7 +8425,7 @@
 19163;ENRIQUE IGLESIAS;BAILAMOS;Tonight we dance I leave my life in your;EUA
 19164;JOSH GROBAN;BRAVE;Wake up wake up the sun...;EUA
 19165;AEROSMITH;CRYIN';There was a time when I was so brokenheart;EUA
-19166;ANNA KENDRICK;CUPS (PITCH PERFECT'S "WHEN I'M GONE");I got my ticket for the long way round;EUA
+19166;ANNA KENDRICK;CUPS (PITCH PERFECT'S WHEN I'M GONE);I got my ticket for the long way round;EUA
 19167;TRIO;DA DA DA;Aha aha aha... What you do and what you do;EUA
 19168;KATY PERRY - JUICY J.;DARK HORSE;I knew you were you were...;EUA
 19169;BEATLES (THE);DAY TRIPPER;Got a good reason for talking the easy way o;EUA
@@ -8463,7 +8464,7 @@
 19202;ONE REPUBLIC;COUNTING STARS;Lately I've been I've been losing...;EUA
 19203;MICHAEL JACKSON;DON'T STOP 'TILL YOU GET ENOUGH;You know I was I was wondering you know;EUA
 19204;SELENA;DREAMING OF YOU;Late at night when all the world is slee;EUA
-19205;BACKSTREET BOYS;EVERYBODY "BACKSTREET'S BACK";Everybody rock your body;EUA
+19205;BACKSTREET BOYS;EVERYBODY BACKSTREET'S BACK;Everybody rock your body;EUA
 19206;WHITNEY HOUSTON;EXHALE (SHOOP SHOOP);Everyone falls in love sometime;EUA
 19207;ALICIA KEYS;GIRL ON FIRE;She's just a girl and she's...;EUA
 19208;EURYTHMICS;HERE COMES THE RAIN AGAIN;Here comes the rain again;EUA
