@@ -2,20 +2,21 @@ package br.com.karaokemusicas.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import br.com.karaokemusicas.service.dto.ListaMusicasDTO;
+import br.com.karaokemusicas.service.dto.MusicaDTO;
 
 public class DAOHelper extends SQLiteOpenHelper {
 
     private static final String NOME_DB = "KaraokeMusicas";
-    private static final int VERSAO_DB = 2;
+    private static final int VERSAO_DB = 3;
     private Context context;
 
     public DAOHelper(Context context) {
@@ -36,7 +37,8 @@ public class DAOHelper extends SQLiteOpenHelper {
         builderQuery.append("   interpreteNormalizado VARCHAR(100) NOT NULL, ");
         builderQuery.append("   tituloNormalizado VARCHAR(100) NOT NULL, ");
         builderQuery.append("   inicioLetraNormalizado VARCHAR(300) NOT NULL, ");
-        builderQuery.append("   idiomaNormalizado VARCHAR(100) NOT NULL ");
+        builderQuery.append("   idiomaNormalizado VARCHAR(100) NOT NULL, ");
+        builderQuery.append("   dataAtualizacao VARCHAR(20) NOT NULL ");
         builderQuery.append("); ");
 
         db.execSQL(builderQuery.toString());
@@ -71,33 +73,32 @@ public class DAOHelper extends SQLiteOpenHelper {
 
     /**
      *
-     * @param db
+     * @param listaMusicasDTO
      */
-    public void inserirValoresIniciais(SQLiteDatabase db) {
+    public void inserirValoresIniciais(ListaMusicasDTO listaMusicasDTO, LocalDateTime dataAlteracao) {
         try {
-            AssetManager assetManager= context.getAssets();
-            InputStreamReader is = new InputStreamReader(assetManager.open("musicas.csv"), "UTF-8");
-            BufferedReader reader = new BufferedReader(is);
-            String linha;
+            SQLiteDatabase db = this.getWritableDatabase();
 
-            while ((linha=reader.readLine()) != null) {
-                String[] dadosDaLinha = linha.split(";");
-
+            for (MusicaDTO musicaDTO : listaMusicasDTO.getMusicas()) {
                 ContentValues valores = new ContentValues();
-                valores.put("id", Integer.parseInt(dadosDaLinha[0]));
-                valores.put("interprete", dadosDaLinha[1]);
-                valores.put("titulo", dadosDaLinha[2]);
-                valores.put("inicioLetra", dadosDaLinha[3]);
-                valores.put("idioma", dadosDaLinha[4]);
-                valores.put("interpreteNormalizado", StringUtils.stripAccents(dadosDaLinha[1]).toLowerCase());
-                valores.put("tituloNormalizado", StringUtils.stripAccents(dadosDaLinha[2]).toLowerCase());
-                valores.put("inicioLetraNormalizado", StringUtils.stripAccents(dadosDaLinha[3]).toLowerCase());
-                valores.put("idiomaNormalizado", StringUtils.stripAccents(dadosDaLinha[4]).toLowerCase());
+                valores.put("id", musicaDTO.getCodigo());
+                valores.put("interprete", musicaDTO.getInterprete());
+                valores.put("titulo", musicaDTO.getTitulo());
+                valores.put("inicioLetra", musicaDTO.getInicioLetra());
+                valores.put("idioma", musicaDTO.getIdioma());
+                valores.put("interpreteNormalizado", StringUtils.stripAccents(musicaDTO.getInterprete()).toLowerCase());
+                valores.put("tituloNormalizado", StringUtils.stripAccents(musicaDTO.getTitulo()).toLowerCase());
+                valores.put("inicioLetraNormalizado", StringUtils.stripAccents(musicaDTO.getInicioLetra()).toLowerCase());
+                valores.put("idiomaNormalizado", StringUtils.stripAccents(musicaDTO.getIdioma()).toLowerCase());
+                valores.put("dataAtualizacao", dataAlteracao.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 
-                db.insert("Musicas", null, valores);
+                long id = db.insertWithOnConflict("Musicas", null, valores, SQLiteDatabase.CONFLICT_IGNORE);
+                if (id == -1) {
+                    db.update("Musicas", valores, "id=?", new String[] {musicaDTO.getCodigo().toString()});
+                }
+
             }
-            is.close();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

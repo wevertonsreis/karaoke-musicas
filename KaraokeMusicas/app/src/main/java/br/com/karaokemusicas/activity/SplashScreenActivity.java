@@ -7,8 +7,12 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.time.LocalDateTime;
+
 import br.com.karaokemusicas.R;
 import br.com.karaokemusicas.dao.MusicaDAO;
+import br.com.karaokemusicas.service.MusicaWebClient;
+import br.com.karaokemusicas.service.dto.ListaMusicasDTO;
 
 /**
  * Controla as acoes do layout activity_splash_screen
@@ -44,9 +48,15 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... voids) {
+            MusicaWebClient musicaWebClient = new MusicaWebClient();
             MusicaDAO musicaDAO = new MusicaDAO(SplashScreenActivity.this);
-            if (musicaDAO.contarTodas() == 0) {
-                musicaDAO.inserirValoresIniciais();
+
+            LocalDateTime dataAlteracao = musicaWebClient.buscarUltimasMusicas().getDataAlteracao();
+            LocalDateTime dataUltimaAtualizacao = musicaDAO.getDataUltimaAtualizacao();
+
+            if (dataUltimaAtualizacao == null || dataAlteracao.isAfter(dataUltimaAtualizacao)) {
+                ListaMusicasDTO listaMusicasDTO = musicaWebClient.buscarMusicas();
+                musicaDAO.inserirValoresIniciais(listaMusicasDTO, dataAlteracao);
             }
             return null;
         }
