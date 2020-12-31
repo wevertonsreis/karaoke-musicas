@@ -1,5 +1,7 @@
 package br.com.karaokemusicas.modelo;
 
+import java.time.LocalDateTime;
+
 public class Musica extends Modelo {
 
     private String interprete;
@@ -11,6 +13,7 @@ public class Musica extends Modelo {
     private String inicioLetraNormalizado;
     private String idiomaNormalizado;
     private Boolean favorita;
+    private LocalDateTime dataAtualizacao;
 
     public Musica() {}
 
@@ -85,4 +88,13 @@ public class Musica extends Modelo {
     public void setFavorita(Boolean favorita) {
         this.favorita = favorita;
     }
+
+    public LocalDateTime getDataAtualizacao() {
+        return dataAtualizacao;
+    }
+
+    public void setDataAtualizacao(LocalDateTime dataAtualizacao) {
+        this.dataAtualizacao = dataAtualizacao;
+    }
+
 }

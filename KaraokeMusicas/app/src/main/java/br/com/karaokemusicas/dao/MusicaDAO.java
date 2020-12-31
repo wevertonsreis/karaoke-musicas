@@ -4,10 +4,13 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.karaokemusicas.modelo.Musica;
+import br.com.karaokemusicas.service.dto.ListaMusicasDTO;
 
 public class MusicaDAO {
 
@@ -17,9 +20,8 @@ public class MusicaDAO {
         this.daoHelper = new DAOHelper(context);
     }
 
-    public void inserirValoresIniciais() {
-        SQLiteDatabase writableDatabase = daoHelper.getWritableDatabase();
-        daoHelper.inserirValoresIniciais(writableDatabase);
+    public void inserirValoresIniciais(ListaMusicasDTO listaMusicasDTO, LocalDateTime dataAlteracao) {
+        daoHelper.inserirValoresIniciais(listaMusicasDTO, dataAlteracao);
     }
 
     public Integer contarTodas() {
@@ -34,8 +36,29 @@ public class MusicaDAO {
         }
         cursor.close();
 
-        System.out.println("quantidade:" + quantidade);
+        System.out.println("quantidade: " + quantidade);
         return quantidade;
+    }
+
+    public LocalDateTime getDataUltimaAtualizacao() {
+        String sql = "SELECT dataAtualizacao FROM Musicas GROUP BY dataAtualizacao";
+
+        Cursor cursor = daoHelper.getReadableDatabase().rawQuery(sql, null);
+
+        String dataAtualizacao = null;
+
+        while (cursor.moveToNext()) {
+            dataAtualizacao = cursor.getString(cursor.getColumnIndex("dataAtualizacao"));
+            cursor.moveToLast();
+        }
+        cursor.close();
+
+        System.out.println("dataAtualizacao: " + dataAtualizacao);
+
+        if (dataAtualizacao != null) {
+            return LocalDateTime.parse(dataAtualizacao, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        }
+        return null;
     }
 
     public List<Musica> buscarTodas() {
