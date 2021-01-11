@@ -21,7 +21,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     private MusicaAdapter musicaFavoritaAdapter;
 
     public SectionsPagerAdapter(FragmentManager fm, Context context, MusicaAdapter musicaAdapter, MusicaAdapter musicaFavoritaAdapter) {
-        super(fm);
+        super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         this.context = context;
         this.musicaAdapter = musicaAdapter;
         this.musicaFavoritaAdapter = musicaFavoritaAdapter;

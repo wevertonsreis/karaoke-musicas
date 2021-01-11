@@ -6,4 +6,7 @@
     <string name="title_menu_buscador">Buscador</string>
     <string name="tab_todas">Todas</string>
     <string name="tab_favoritas">Favoritas</string>
+
+    <string name="menu_opcao_remover_favorita">Remover das favoritas</string>
+    <string name="menu_opcao_adicionar_favorita">Adicionar as favoritas</string>
 </resources>

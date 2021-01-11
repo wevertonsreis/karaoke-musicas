@@ -1,31 +1,33 @@
 package br.com.karaokemusicas.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.Icon;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.karaokemusicas.R;
-import br.com.karaokemusicas.dao.MusicaFavoritaDAO;
+import br.com.karaokemusicas.fragment.OpcoesBottomSheetFragment;
 import br.com.karaokemusicas.holder.MusicaViewHolder;
 import br.com.karaokemusicas.modelo.Musica;
-import br.com.karaokemusicas.modelo.MusicaFavorita;
 
 public class MusicaAdapter extends RecyclerView.Adapter {
 
     private List<Musica> musicas;
     private Context context;
+    private FragmentManager fragmentManager;
 
-    public MusicaAdapter(List<Musica> musicas, Context context) {
+    public MusicaAdapter(List<Musica> musicas,  FragmentManager fragmentManager, Context context) {
         this.musicas = musicas;
+        this.fragmentManager = fragmentManager;
         this.context = context;
     }
 
@@ -33,8 +35,7 @@ public class MusicaAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_musica, parent, false);
-        MusicaViewHolder musicaViewHolder = new MusicaViewHolder(view, context);
-        return musicaViewHolder;
+        return new MusicaViewHolder(view);
     }
 
     @Override
@@ -49,30 +50,11 @@ public class MusicaAdapter extends RecyclerView.Adapter {
 
         ImageView botaoFavorito = musicaViewHolder.getBotaoFavorito();
 
-        if(musica.getFavorita()){
-            botaoFavorito.setImageIcon(Icon.createWithResource(context, android.R.drawable.btn_star_big_on));
-        } else {
-            botaoFavorito.setImageIcon(Icon.createWithResource(context, android.R.drawable.btn_star_big_off));
-        }
         botaoFavorito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageView imageView = (ImageView) v;
-                MusicaFavoritaDAO musicaFavoritaDAO = new MusicaFavoritaDAO(context);
-                if(musica.getFavorita()){
-                    imageView.setImageIcon(Icon.createWithResource(context, android.R.drawable.btn_star_big_off));
-                    musica.setFavorita(false);
-
-                    musicaFavoritaDAO.deletar(musica);
-                } else {
-                    imageView.setImageIcon(Icon.createWithResource(context, android.R.drawable.btn_star_big_on));
-                    musica.setFavorita(true);
-
-                    MusicaFavorita musicaFavorita = new MusicaFavorita();
-                    musicaFavorita.setMusica(musica);
-                    musicaFavoritaDAO.inserir(musicaFavorita);
-                }
-
+                OpcoesBottomSheetFragment opcoesBottomSheetFragment = new OpcoesBottomSheetFragment(musica, context);
+                opcoesBottomSheetFragment.show(fragmentManager, "teste");
             }
         });
     }
@@ -87,5 +69,6 @@ public class MusicaAdapter extends RecyclerView.Adapter {
         this.musicas.addAll(musicas);
         notifyDataSetChanged();
     }
+
 
 }

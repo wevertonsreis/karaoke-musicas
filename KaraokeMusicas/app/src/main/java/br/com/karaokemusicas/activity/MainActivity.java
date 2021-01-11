@@ -1,13 +1,13 @@
 package br.com.karaokemusicas.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -21,6 +21,9 @@ import br.com.karaokemusicas.dao.MusicaDAO;
 import br.com.karaokemusicas.modelo.Musica;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final int POSICAO_PAGINA_TODAS = 0;
+    private static final int POSICAO_PAGINA_FAVORITAS = 1;
 
     private Toolbar toolbar;
     private TabLayout tabs;
@@ -36,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         MusicaDAO musicaDAO = new MusicaDAO(this);
-
         musicas = musicaDAO.buscarTodas();
-        musicaAdapter = new MusicaAdapter(musicas, this);
         musicasFavoritas = musicaDAO.buscarFavoritas();
-        musicaFavoritaAdapter = new MusicaAdapter(musicasFavoritas, this);
+
+        musicaAdapter = new MusicaAdapter(musicas, getSupportFragmentManager(), this);
+        musicaFavoritaAdapter = new MusicaAdapter(musicasFavoritas, getSupportFragmentManager(), this);
 
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(),this, musicaAdapter, musicaFavoritaAdapter);
         viewPager = findViewById(R.id.view_pager);
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         tabs = findViewById(R.id.tab_layout);
         tabs.setupWithViewPager(viewPager);
         toolbar = findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -59,15 +63,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 MusicaDAO musicaDAO = new MusicaDAO(MainActivity.this);
-                List<Musica> musicasFiltradas;
                 switch (position) {
-                    case 0:
-                        musicasFiltradas = musicaDAO.buscarTodas();
-                        musicaAdapter.setFiltro(musicasFiltradas);
+                    case POSICAO_PAGINA_TODAS:
+                        musicaAdapter.setFiltro(musicaDAO.buscarTodas());
                         break;
-                    case 1:
-                        musicasFiltradas = musicaDAO.buscarFavoritas();
-                        musicaFavoritaAdapter.setFiltro(musicasFiltradas);
+                    case POSICAO_PAGINA_FAVORITAS:
+                        musicaFavoritaAdapter.setFiltro(musicaDAO.buscarFavoritas());
                         break;
                 }
             }
@@ -96,10 +97,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemActionCollapse(MenuItem item) {
                 switch (tabs.getSelectedTabPosition()) {
-                    case 0:
+                    case POSICAO_PAGINA_TODAS:
                         musicaAdapter.setFiltro(musicas);
                         break;
-                    case 1:
+                    case POSICAO_PAGINA_FAVORITAS:
                         musicaFavoritaAdapter.setFiltro(musicasFavoritas);
                         break;
                 }
