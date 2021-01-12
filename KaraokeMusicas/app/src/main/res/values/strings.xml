@@ -9,4 +9,7 @@
 
     <string name="menu_opcao_remover_favorita">Remover das favoritas</string>
     <string name="menu_opcao_adicionar_favorita">Adicionar as favoritas</string>
+    <string name="menu_opcao_assistir_no_you_tube">Assistir no You Tube</string>
+    <string name="menu_opcao_escutar_no_spotify">Escutar no Spotify</string>
+
 </resources>

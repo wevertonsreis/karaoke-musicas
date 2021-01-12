@@ -15,7 +15,7 @@ public class MusicaViewHolder extends RecyclerView.ViewHolder {
     private TextView interprete;
     private TextView titulo;
     private TextView inicioLetra;
-    private ImageView botaoFavorito;
+    private ImageView botaoMaisOpcoes;
 
     public MusicaViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -23,7 +23,7 @@ public class MusicaViewHolder extends RecyclerView.ViewHolder {
         this.interprete = itemView.findViewById(R.id.interprete);
         this.titulo = itemView.findViewById(R.id.titulo);
         this.inicioLetra = itemView.findViewById(R.id.inicio_letra);
-        this.botaoFavorito = itemView.findViewById(R.id.botao_favorito);
+        this.botaoMaisOpcoes = itemView.findViewById(R.id.botao_mais_opcoes);
     }
 
     public TextView getCodigo() {
@@ -42,8 +42,8 @@ public class MusicaViewHolder extends RecyclerView.ViewHolder {
         return inicioLetra;
     }
 
-    public ImageView getBotaoFavorito() {
-        return botaoFavorito;
+    public ImageView getBotaoMaisOpcoes() {
+        return botaoMaisOpcoes;
     }
 
 }

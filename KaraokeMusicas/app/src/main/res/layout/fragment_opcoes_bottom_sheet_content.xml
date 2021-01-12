@@ -16,7 +16,7 @@
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
         android:padding="15dp"
-        android:text="Adicionar as Favoritas" />
+        android:text="@string/menu_opcao_adicionar_favorita" />
 
     <TextView
         android:id="@+id/menu_botao_ver_no_you_tube"
@@ -27,7 +27,7 @@
         android:drawablePadding="15dp"
         android:gravity="center_vertical"
         android:padding="15dp"
-        android:text="Ver no You Tube" />
+        android:text="@string/menu_opcao_assistir_no_you_tube" />
 
     <TextView
         android:id="@+id/menu_botao_ver_no_spotify"
@@ -38,6 +38,6 @@
         android:drawablePadding="15dp"
         android:gravity="center_vertical"
         android:padding="15dp"
-        android:text="Ver no Spotify" />
+        android:text="@string/menu_opcao_escutar_no_spotify" />
 
 </LinearLayout>

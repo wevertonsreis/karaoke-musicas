@@ -1,12 +1,7 @@
 package br.com.karaokemusicas.fragment;
 
-import android.app.SearchManager;
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +14,15 @@ import androidx.annotation.Nullable;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import br.com.karaokemusicas.R;
+import br.com.karaokemusicas.listener.EscutarNoSpotifyListener;
+import br.com.karaokemusicas.listener.AssistirNoYouTubeListener;
 import br.com.karaokemusicas.dao.MusicaFavoritaDAO;
 import br.com.karaokemusicas.modelo.Musica;
 import br.com.karaokemusicas.modelo.MusicaFavorita;
 
 public class OpcoesBottomSheetFragment extends BottomSheetDialogFragment {
+
+    public static final String TAG = OpcoesBottomSheetFragment.class.getName();
 
     private Musica musica;
     private Context context;
@@ -66,31 +65,10 @@ public class OpcoesBottomSheetFragment extends BottomSheetDialogFragment {
         });
 
         TextView opcaoVerNoYouTube = view.findViewById(R.id.menu_botao_ver_no_you_tube);
-        opcaoVerNoYouTube.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("https://www.youtube.com/results?search_query=" +
-                                musica.getInterprete() + "+" + musica.getTitulo()));
-                context.startActivity(webIntent);
-                OpcoesBottomSheetFragment.this.dismiss();
-            }
-        });
+        opcaoVerNoYouTube.setOnClickListener(new AssistirNoYouTubeListener(musica, context, this));
 
-        TextView opcaoVerNoSpotify = view.findViewById(R.id.menu_botao_ver_no_spotify);
-        opcaoVerNoSpotify.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.setAction(MediaStore.INTENT_ACTION_MEDIA_PLAY_FROM_SEARCH);
-                intent.setComponent(new ComponentName(
-                        "com.spotify.music",
-                        "com.spotify.music.MainActivity"));
-                intent.putExtra(SearchManager.QUERY, musica.getInterprete() +" - "+ musica.getTitulo());
-                context.startActivity(intent);
-                OpcoesBottomSheetFragment.this.dismiss();
-            }
-        });
+        TextView opcaoEscutarNoSpotify = view.findViewById(R.id.menu_botao_ver_no_spotify);
+        opcaoEscutarNoSpotify.setOnClickListener(new EscutarNoSpotifyListener(musica, context, this));
 
         return view;
     }

@@ -14,7 +14,7 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.List;
 
 import br.com.karaokemusicas.R;
-import br.com.karaokemusicas.activity.listener.BuscarMusicasListener;
+import br.com.karaokemusicas.listener.BuscarMusicasListener;
 import br.com.karaokemusicas.adapter.MusicaAdapter;
 import br.com.karaokemusicas.adapter.SectionsPagerAdapter;
 import br.com.karaokemusicas.dao.MusicaDAO;

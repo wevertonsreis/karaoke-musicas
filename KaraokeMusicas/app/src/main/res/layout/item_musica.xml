@@ -83,7 +83,7 @@
                 app:layout_constraintTop_toBottomOf="@id/titulo" />
 
             <ImageView
-                android:id="@+id/botao_favorito"
+                android:id="@+id/botao_mais_opcoes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"

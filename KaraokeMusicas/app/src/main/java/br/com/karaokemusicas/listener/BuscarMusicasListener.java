@@ -1,4 +1,4 @@
-package br.com.karaokemusicas.activity.listener;
+package br.com.karaokemusicas.listener;
 
 import android.content.Context;
 import android.widget.SearchView;
